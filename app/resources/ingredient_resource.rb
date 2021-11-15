@@ -5,4 +5,6 @@ class IngredientResource < ApplicationResource
 
   filter :unit, :string_enum, allow: Ingredient.units.keys
   filter :category, :string_enum, allow: Ingredient.categories.keys
+
+  many_to_many :recipes
 end

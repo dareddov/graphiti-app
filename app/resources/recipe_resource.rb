@@ -6,4 +6,5 @@ class RecipeResource < ApplicationResource
   attribute :preparation_time, :integer
   attribute :difficulty, :integer
 
+  many_to_many :ingredients
 end

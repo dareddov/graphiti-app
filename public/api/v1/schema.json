@@ -112,6 +112,130 @@
           "count"
         ]
       }
+    },
+    {
+      "name": "RecipeResource",
+      "type": "recipes",
+      "graphql_entrypoint": "recipes",
+      "description": null,
+      "attributes": {
+        "id": {
+          "type": "integer_id",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "name": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "description": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "preparation_time": {
+          "type": "integer",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "difficulty": {
+          "type": "integer",
+          "readable": true,
+          "writable": true,
+          "description": null
+        }
+      },
+      "extra_attributes": {
+      },
+      "sorts": {
+        "id": {
+        },
+        "name": {
+        },
+        "description": {
+        },
+        "preparation_time": {
+        },
+        "difficulty": {
+        }
+      },
+      "filters": {
+        "id": {
+          "type": "integer_id",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "preparation_time": {
+          "type": "integer",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "difficulty": {
+          "type": "integer",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        }
+      },
+      "relationships": {
+      },
+      "stats": {
+        "total": [
+          "count"
+        ]
+      }
     }
   ],
   "endpoints": {
@@ -131,6 +255,25 @@
         },
         "destroy": {
           "resource": "IngredientResource"
+        }
+      }
+    },
+    "/api/v1/recipes": {
+      "actions": {
+        "index": {
+          "resource": "RecipeResource"
+        },
+        "show": {
+          "resource": "RecipeResource"
+        },
+        "create": {
+          "resource": "RecipeResource"
+        },
+        "update": {
+          "resource": "RecipeResource"
+        },
+        "destroy": {
+          "resource": "RecipeResource"
         }
       }
     }

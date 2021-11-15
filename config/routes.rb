@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   scope path: ApplicationResource.endpoint_namespace, defaults: { format: :jsonapi } do
+    resources :recipe_ingredients, only: :index
     resources :recipes
     resources :ingredients
     mount VandalUi::Engine, at: '/vandal'
