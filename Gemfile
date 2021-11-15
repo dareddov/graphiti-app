@@ -49,6 +49,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 5.0'
   gem 'faker', '~> 2.5'
   gem 'graphiti_spec_helpers'
+  gem 'pry-rails'
 end
 
 group :test do
